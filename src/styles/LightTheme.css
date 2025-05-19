@@ -1,0 +1,60 @@
+/* Light theme styles */
+.light-theme {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.light-theme .app-container {
+  background-color: #f5f5f5;
+}
+
+.light-theme .todo-container {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .app-title {
+  color: #333;
+}
+
+.light-theme .task-input {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.light-theme .task-input::placeholder {
+  color: #999;
+}
+
+.light-theme .add-btn {
+  background-color: #4a90e2;
+}
+
+.light-theme .add-btn:hover {
+  background-color: #3a80d2;
+}
+
+.light-theme .todo-item {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.light-theme .todo-text {
+  color: #333;
+}
+
+.light-theme .todo-item.completed {
+  background-color: #f9f9f9;
+}
+
+.light-theme .todo-item.completed .todo-text {
+  color: #888;
+}
+
+.light-theme .empty-list {
+  color: #6c757d;
+  background-color: white;
+  border: 1px solid #eee;
+}

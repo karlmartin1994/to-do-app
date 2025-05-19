@@ -1,0 +1,60 @@
+/* Dark theme styles */
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #e1e1e1;
+}
+
+.dark-theme .app-container {
+  background-color: #1e1e1e;
+}
+
+.dark-theme .todo-container {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .app-title {
+  color: #e1e1e1;
+}
+
+.dark-theme .task-input {
+  background-color: #3d3d3d;
+  color: #e1e1e1;
+  border: 1px solid #444444;
+}
+
+.dark-theme .task-input::placeholder {
+  color: #aaaaaa;
+}
+
+.dark-theme .add-btn {
+  background-color: #3a80d2;
+}
+
+.dark-theme .add-btn:hover {
+  background-color: #2a70c2;
+}
+
+.dark-theme .todo-item {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #444444;
+}
+
+.dark-theme .todo-text {
+  color: #e1e1e1;
+}
+
+.dark-theme .todo-item.completed {
+  background-color: #252525;
+}
+
+.dark-theme .todo-item.completed .todo-text {
+  color: #888888;
+}
+
+.dark-theme .empty-list {
+  color: #aaaaaa;
+  background-color: #2d2d2d;
+  border: 1px solid #444444;
+}

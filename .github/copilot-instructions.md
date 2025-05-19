@@ -20,4 +20,3 @@ This is an Electron application using React and TypeScript. The project has the 
 
 - Components should be placed in the `src/components` directory
 - Styles should be placed in the `src/styles` directory and each component should have its own CSS file
-- App theme should be defined in `src/styles/theme.ts`
