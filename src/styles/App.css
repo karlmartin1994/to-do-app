@@ -1,0 +1,34 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.app-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #333;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .todo-container {
+    padding: 20px;
+  }
+}
