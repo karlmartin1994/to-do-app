@@ -4,10 +4,36 @@
 
 This is an Electron application using React and TypeScript. The project has the following structure:
 
-- `src/main.ts`: Electron main process
-- `src/renderer.tsx`: React entry point for renderer process
+- `src/Main.ts`: Electron main process
+- `src/Renderer.tsx`: React entry point for renderer process
 - `src/App.tsx`: Main React component
 - `webpack.config.js`: Configuration for building both main and renderer processes
+
+## File Naming Conventions
+
+1. **React Components** (`.tsx`, `.jsx`, `.js`):
+   - Use PascalCase
+   - Must match the component name inside the file
+   - Examples: `AppContainer.tsx`, `TaskList.tsx`, `ThemeToggle.tsx`
+
+2. **Entry Point Files**:
+   - HTML and index files: lowercase (`index.html`, `index.tsx`)
+   - Electron entry points: PascalCase (`Main.ts`, `Renderer.tsx`)
+
+3. **CSS Files**:
+   - Global/utility CSS: lowercase with hyphens (`global.css`, `theme.css`)
+   - Component-specific CSS: Match component name (`AppContainer.css`)
+
+4. **Configuration Files**:
+   - Always lowercase (`package.json`, `tsconfig.json`, `webpack.config.js`)
+
+5. **Documentation Files**:
+   - Uppercase with extension (`README.md`, `LICENSE.md`)
+
+6. **Directory Names**:
+   - Always lowercase
+   - Use hyphens for multiple words
+   - Examples: `components`, `styles`, `utils`, `test-utils`
 
 ## Development Workflow
 
@@ -24,13 +50,13 @@ This is an Electron application using React and TypeScript. The project has the 
 ## CSS File Organization
 
 1. **Global Styles**
-   - `src/styles/Global.css`: Base styles, resets, and root-level styles
-   - `src/styles/Theme.css`: Theme variables and theme-specific styles
+   - `src/styles/global.css`: Base styles, resets, and root-level styles
+   - `src/styles/theme.css`: Theme variables and theme-specific styles
 
 2. **Component Styles**
    - All component-specific styles should be in `src/styles/components/`
-   - Named to match their component: `ComponentName.css`
-   - Example: `src/styles/components/AddTask.css`
+   - Named to match their component: Use PascalCase to match component name
+   - Example: `src/styles/components/AppContainer.css`
 
 ## CSS Naming Conventions
 
@@ -77,7 +103,7 @@ Follow these naming conventions for CSS classes:
 
 ## Theme Structure
 
-- Theme variables should be defined in `src/styles/Global.css`
-- Global stylings should be defined in `src/styles/Theme.css`
+- Theme variables should be defined in `src/styles/global.css`
+- Global stylings should be defined in `src/styles/theme.css`
 - Light and dark theme variants should use the `themeLight` and `themeDark` classes
 - Component styles should use theme variables for colors, spacing, and other theme-specific properties
