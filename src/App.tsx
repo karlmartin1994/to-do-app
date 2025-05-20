@@ -4,8 +4,7 @@ import AddTask from './components/AddTask';
 import ThemeToggle from './components/ThemeToggle';
 import { Todo } from './components/TodoItem';
 import './styles/App.css';
-import './styles/LightTheme.css';
-import './styles/DarkTheme.css';
+import './styles/theme.css';
 
 const App: React.FC = () => {
   // Load todos from localStorage if available
@@ -71,12 +70,11 @@ const App: React.FC = () => {
   // Delete a todo
   const deleteTodo = (id: number) => {
     setTodos(todos.filter(todo => todo.id !== id));
-  };
-  return (
-    <div className={`app-container ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
-      <div className="todo-container">
-        <div className="app-header">
-          <h1 className="app-title">To-Do List</h1>
+  };  return (
+    <div className={`appContainer ${isDarkMode ? 'themeDark' : 'themeLight'}`}>
+      <div className="todoContainer">
+        <div className="appHeader">
+          <h1 className="appTitle">To-Do List</h1>
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         </div>
         <AddTask onAdd={addTodo} />

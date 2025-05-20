@@ -1,5 +1,5 @@
 /* Base layout styles independent of theme */
-.app-container {
+.appContainer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -7,25 +7,29 @@
   padding: 40px 20px;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
+  background-color: var(--container-background);
+  color: var(--text-color);
 }
 
-.todo-container {
+.todoContainer {
   width: 100%;
   max-width: 600px;
   border-radius: 12px;
   padding: 30px;
   box-sizing: border-box;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--container-background);
+  color: var(--text-color);
 }
 
-.app-header {
+.appHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.app-title {
+.appTitle {
   margin: 0;
   font-size: 2rem;
   font-weight: 600;
@@ -33,7 +37,7 @@
 }
 
 @media (max-width: 768px) {
-  .todo-container {
+  .todoContainer {
     padding: 20px;
   }
 }

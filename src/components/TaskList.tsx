@@ -10,11 +10,11 @@ interface TaskListProps {
 
 const TaskList: React.FC<TaskListProps> = ({ todos, onToggle, onDelete }) => {
   if (todos.length === 0) {
-    return <div className="empty-list">No tasks yet. Add one!</div>;
+    return <div className="emptyList">No tasks yet. Add one!</div>;
   }
   
   return (
-    <ul className="task-list">
+    <ul className="taskList">
       {todos.map(todo => (
         <TodoItem 
           key={todo.id} 

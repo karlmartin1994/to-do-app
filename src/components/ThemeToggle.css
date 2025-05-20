@@ -1,8 +1,8 @@
 /* Theme toggle button styles */
-.theme-toggle {
-  background-color: #f5f5f5;
-  color: #333;
-  border: 1px solid #ddd;
+.themeToggle {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -12,23 +12,23 @@
   transition: all 0.3s ease;
 }
 
-.theme-toggle:hover {
-  background-color: #eaeaea;
+.themeToggle:hover {
+  background-color: var(--completed-background);
 }
 
 /* Icon for theme toggle */
-.theme-icon {
+.themeIcon {
   margin-right: 6px;
   font-size: 16px;
 }
 
 /* Dark theme specific styles for the toggle button */
-.dark-theme .theme-toggle {
-  background-color: #2d2d2d;
-  color: #e1e1e1;
-  border: 1px solid #444444;
+.themeDark .themeToggle {
+  background-color: var(--container-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
 }
 
-.dark-theme .theme-toggle:hover {
-  background-color: #3d3d3d;
+.themeDark .themeToggle:hover {
+  background-color: #3d3d3d; /* Slightly darker for hover state in dark mode */
 }

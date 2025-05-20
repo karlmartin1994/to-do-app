@@ -18,15 +18,15 @@ const AddTask: React.FC<AddTaskProps> = ({ onAdd }) => {
   };
 
   return (
-    <form className="add-task-form" onSubmit={handleSubmit}>
+    <form className="addTaskForm" onSubmit={handleSubmit}>
       <input
         type="text"
-        className="task-input"
+        className="taskInput"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add a new task..."
       />
-      <button type="submit" className="add-btn">Add Task</button>
+      <button type="submit" className="addButton">Add Task</button>
     </form>
   );
 };

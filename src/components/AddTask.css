@@ -1,25 +1,27 @@
-.add-task-form {
+.addTaskForm {
   display: flex;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.task-input {
+.taskInput {
   flex: 1;
   padding: 12px;
-  border: 1px solid #ddd;
   border-radius: 8px 0 0 8px;
   font-size: 1rem;
   outline: none;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
 }
 
-.task-input:focus {
-  border-color: #4a90e2;
+.taskInput:focus {
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
 }
 
-.add-btn {
-  background-color: #4a90e2;
+.addButton {
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 0 8px 8px 0;
@@ -29,6 +31,6 @@
   transition: background-color 0.2s;
 }
 
-.add-btn:hover {
-  background-color: #3a80d2;
+.addButton:hover {
+  background-color: var(--primary-color-hover);
 }

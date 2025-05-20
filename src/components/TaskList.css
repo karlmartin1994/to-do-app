@@ -1,16 +1,17 @@
-.task-list {
+.taskList {
   list-style: none;
   padding: 0;
   margin-top: 20px;
   width: 100%;
 }
 
-.empty-list {
+.emptyList {
   text-align: center;
   padding: 20px;
   font-style: italic;
-  color: #6c757d;
-  background-color: white;
+  color: var(--text-secondary-color);
+  background-color: var(--container-background);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-sm);
+  border: 1px solid var(--border-color);
 }

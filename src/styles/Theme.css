@@ -1,0 +1,31 @@
+.themeLight {
+  --primary-color: #4a90e2;
+  --primary-color-hover: #3a80d2;
+  --background-color: #f5f5f5;
+  --container-background: #ffffff;
+  --text-color: #333333;
+  --text-secondary-color: #999999;
+  --border-color: #dddddd;
+  --border-light-color: #eeeeee;
+  --completed-background: #f9f9f9;
+  --completed-text-color: #666666;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --input-background: var(--container-background);
+}
+
+.themeDark {
+  --primary-color: #3a80d2;
+  --primary-color-hover: #2a70c2;
+  --background-color: #1e1e1e;
+  --container-background: #2d2d2d;
+  --text-color: #e1e1e1;
+  --text-secondary-color: #aaaaaa;
+  --border-color: #444444;
+  --border-light-color: #444444;
+  --completed-background: #252525;
+  --completed-text-color: #888888;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --input-background: #3d3d3d;
+}
