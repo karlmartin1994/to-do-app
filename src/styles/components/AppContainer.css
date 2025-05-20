@@ -1,0 +1,59 @@
+.appContainer {
+    min-height: 100vh;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.themeToggleContainer {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.themeDark {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.themeDark .todoContainer {
+    background-color: var(--container-background);
+    box-shadow: var(--box-shadow);
+}
+
+.themeDark .appTitle {
+    color: var(--text-color);
+}
+
+.themeLight {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.themeLight .todoContainer {
+    background-color: var(--container-background);
+    box-shadow: var(--box-shadow);
+}
+
+.themeLight .appTitle {
+    color: var(--text-color);
+}
+
+.todoContainer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.appHeader {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.appTitle {
+    font-size: 2rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}

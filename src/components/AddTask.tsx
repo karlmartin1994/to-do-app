@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddTask.css';
+import '../styles/components/AddTask.css';
 
 interface AddTaskProps {
   onAdd: (text: string) => void;

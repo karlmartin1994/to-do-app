@@ -21,6 +21,17 @@ This is an Electron application using React and TypeScript. The project has the 
 - Components should be placed in the `src/components` directory
 - Styles should be placed in the `src/styles` directory and each component should have its own CSS file
 
+## CSS File Organization
+
+1. **Global Styles**
+   - `src/styles/Global.css`: Base styles, resets, and root-level styles
+   - `src/styles/Theme.css`: Theme variables and theme-specific styles
+
+2. **Component Styles**
+   - All component-specific styles should be in `src/styles/components/`
+   - Named to match their component: `ComponentName.css`
+   - Example: `src/styles/components/AddTask.css`
+
 ## CSS Naming Conventions
 
 Follow these naming conventions for CSS classes:
@@ -66,6 +77,7 @@ Follow these naming conventions for CSS classes:
 
 ## Theme Structure
 
-- Theme variables should be defined in `src/styles/theme.css`
+- Theme variables should be defined in `src/styles/Global.css`
+- Global stylings should be defined in `src/styles/Theme.css`
 - Light and dark theme variants should use the `themeLight` and `themeDark` classes
 - Component styles should use theme variables for colors, spacing, and other theme-specific properties
