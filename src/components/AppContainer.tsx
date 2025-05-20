@@ -4,7 +4,7 @@ import AddTask from './AddTask';
 import ThemeToggle from './ThemeToggle';
 import { Todo } from './TodoItem';
 import '../styles/components/AppContainer.css';
-import '../styles/Theme.css';
+import '../styles/theme.css';
 
 const AppContainer: React.FC = () => {
   // Initialize dark mode state from localStorage or system preference
