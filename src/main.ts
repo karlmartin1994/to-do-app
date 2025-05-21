@@ -13,7 +13,9 @@ function createWindow() {
     width: 800,
     height: 600,
     frame: false,
-    backgroundColor: '#00ffffff',    webPreferences: {
+    icon: path.join(__dirname, 'assets', 'icon.png'),
+    backgroundColor: '#00ffffff',
+    webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
     },
