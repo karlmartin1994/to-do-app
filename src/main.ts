@@ -1,11 +1,48 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, Tray, Menu } from 'electron';
 import * as path from 'path';
 import * as remote from '@electron/remote/main';
 
 // Initialize remote module
 remote.initialize();
 
+let isQuitting = false;
 let mainWindow: Electron.BrowserWindow | null;
+let tray: Electron.Tray | null = null;
+
+function createTray() {
+  const iconPath = path.join(__dirname, 'assets', 'icon.png');
+  tray = new Tray(iconPath);
+
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Show App',
+      click: () => {
+        if (mainWindow) {
+          mainWindow.show();
+        } else {
+          createWindow();
+        }
+      },
+    },
+    {
+      label: 'Quit',
+      click: () => {
+        app.quit();
+      },
+    },
+  ]);
+  tray.setToolTip('Todo App');
+  tray.setContextMenu(contextMenu);
+
+  // Add click handler to tray icon
+  tray.on('click', () => {
+    if (mainWindow) {
+      mainWindow.show();
+    } else {
+      createWindow();
+    }
+  });
+}
 
 function createWindow() {
   // Create the browser window
@@ -30,27 +67,46 @@ function createWindow() {
   // Open the DevTools in development mode
   if (process.env.NODE_ENV !== 'production') {
     mainWindow.webContents.openDevTools();
-  }
+  }  // Handle window close event - hide instead of closing
+  mainWindow.on('close', (event: Electron.Event) => {
+    if (!isQuitting) {
+      event.preventDefault();
+      mainWindow?.hide();
+    }
+  });
 
-  // Handle window close
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
 }
 
-// Create window when app is ready
-app.whenReady().then(createWindow);
+// Create window and tray when app is ready
+app.whenReady().then(() => {
+  createWindow();
+  createTray();
+});
 
-// Quit the app when all windows are closed (except on macOS)
+// Prevent default quit behavior when all windows are closed
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
+    if (!isQuitting) {
+      // On Windows and Linux, we prevent the default quit
+      return;
+    }
     app.quit();
   }
 });
 
 // Create a new window when app is activated (macOS)
-app.on('activate', () => {
+app.on('activate', (event: Electron.Event, hasVisibleWindows: boolean) => {
   if (mainWindow === null) {
     createWindow();
+  } else {
+    mainWindow.show();
   }
+});
+
+// Add before-quit event handler
+app.on('before-quit', (event: Electron.Event) => {
+  isQuitting = true;
 });
