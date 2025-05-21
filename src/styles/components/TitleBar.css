@@ -1,0 +1,73 @@
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  padding: 0;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.titleBar.themeDark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.titleBar.themeLight {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.titleBarDrag {
+  flex: 1;
+  -webkit-app-region: drag;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.appName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.titleBarButtons {
+  display: flex;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+
+.titleBarButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.titleBarButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.titleBarButton.close:hover {
+  background-color: #e81123;
+  color: white;
+}
+
+.titleBar.themeLight .titleBarButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.titleBar.themeLight .titleBarButton.close:hover {
+  background-color: #e81123;
+  color: white;
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TaskList from './TaskList';
 import AddTask from './AddTask';
 import ThemeToggle from './ThemeToggle';
+import TitleBar from './TitleBar';
 import { Todo } from './TodoItem';
 import '../styles/components/AppContainer.css';
 import '../styles/theme.css';
@@ -75,6 +76,7 @@ const AppContainer: React.FC = () => {
 
   return (
     <div className={`appContainer ${isDarkMode ? 'themeDark' : 'themeLight'}`}>
+      <TitleBar isDarkMode={isDarkMode} />
       <div className="themeToggleContainer">
         <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       </div>
